@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Snake Game</title>
+	<link rel="stylesheet" type="text/css" href="inc/bootstrap.min.css">
+	<link  href="inc/snake.ico">
+</head>
+<body style="background: #F0EFE2 url(inc/background.png) repeat;">
+<div class="container">
+   <h3>Simple Snake Game:  </h3>
+   <ul>
+	   <li>This is the most popular mobile game which you can play in your desktop.</li>
+	   <li>Move the snake toward the dots to get more score.</li>
+	   <li>You will loose your score if snake strikes on either sides.</li>
+	   <li>Game will restart if snake strikes on either sides.</li>		
+   </ul>
+		<button class="btn btn-success" onclick="startapp();">START</button>
+		<button class="btn btn-danger" onclick="closeapp();">CLOSE</button>
+</div>
+<script type="text/javascript">
+	 const{ipcRenderer} = require('electron');
+
+			function startapp(){
+
+			ipcRenderer.send('item:startApp');
+			}
+			function closeapp(){
+				ipcRenderer.send('item:closeApp');
+			}
+</script>
+
+</body>
+</html>
+

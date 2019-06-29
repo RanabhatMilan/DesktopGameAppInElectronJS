@@ -1,0 +1,21 @@
+{
+  "name": "newapp2",
+  "version": "1.0.0",
+  "description": "Check Application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --no-asar --icon=inc/snake.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . Snake-game --overwrite --no-asar --platform=win32 --arch=ia32 --icon=inc/snake.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Snake Game\"",
+    "package-linux": "electron-packager . electron-tutorial-app --overwrite --no-asar --platform=linux --arch=x64 --icon=inc/snake.png --prune=true --out=release-builds"
+  },
+  "author": "Milan",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^5.0.6"
+  },
+  "devDependencies": {
+    "electron-package": "^0.1.0",
+    "electron-packager": "^14.0.0"
+  }
+}
