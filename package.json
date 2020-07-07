@@ -12,7 +12,7 @@
   "author": "Milan",
   "license": "MIT",
   "dependencies": {
-    "electron": "^5.0.6"
+    "electron": "^7.2.4"
   },
   "devDependencies": {
     "electron-package": "^0.1.0",
